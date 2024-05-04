@@ -1,0 +1,20 @@
+# Local keepie url as the default keepie url
+keepie:
+  url: "http://localhost:8000"
+
+# local url as the default receive_url
+receive-url: "http://localhost:8080"
+
+server:
+  port: 8080
+  address: 0.0.0.0
+
+spring:
+  datasource:
+    driver-class-name: org.sqlite.JDBC
+    # sqlite jdbc url patten: jdbc:sqlite:your path, update this path as your local db file location
+    url: jdbc:sqlite:D:\todolist1\src\main\resources\db\task.db
+  jpa:
+    database-platform: org.sqlite.hibernate.dialect.SQLiteDialect
+    hibernate:
+      ddl-auto: update
