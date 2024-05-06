@@ -20,9 +20,9 @@ To successfully run this project, ensure the following prerequisites are met:
 
 ### How to run this project in local
 
-1.Please modify the setting in application.yml file:
+1.Please modify the setting in application.yml file, make sure you are setting up the **sqlite url** correctly.
 
-```shell
+```yaml
 # Local keepie url as the default keepie url
 keepie:
   url: "http://localhost:8000"
@@ -38,7 +38,7 @@ spring:
   datasource:
     driver-class-name: org.sqlite.JDBC
     # sqlite jdbc url patten: jdbc:sqlite:your path, update this path as your local db file location
-    url: jdbc:sqlite:your local db file location
+    url: jdbc:sqlite:/tmp/task.db
     # for example - url: jdbc:sqlite:/opt/todolist/task.db
   jpa:
     database-platform: org.sqlite.hibernate.dialect.SQLiteDialect
